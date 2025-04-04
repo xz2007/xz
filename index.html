@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8">
+    
+    </head><body>　　　　<title></title>
+    <!--网页标题加入访问用户当前的城市名-参数请空-->
+    　　　　<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&amp;ak=6yAoynmTPNlTBa8z1X4LfwGE"></script>
+    　　　　<div id="bdMapBox" style="display:none;"></div>
+    　　　　<script type="text/javascript">
+        // 百度地图API功能
+        var map = new BMap.Map("bdMapBox");
+        var nowCity = new BMap.LocalCity();
+        nowCity.get(bdGetPosition);
+
+        function bdGetPosition(result) {
+            var cityName = result.name; //当前的城市名
+            /*自定义代码*/
+
+
+            document.title = cityName + "小志个人主页";
+            /*城市名后自定义网页标题参数*/
+        }
+    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="“Content-Security-Policy”" content="“upgrade-insecure-requests”">
+    <meta name="description" itemprop="description" content="小志个人主页">
+    <meta name="keywords" content="小志">
+    <meta itemprop="name" content="小志 | 一个热爱游戏的咸鱼">
+    <meta itemprop="image" content="http://10086.tp6637.cn/109951164406763045.jpg">
+    <meta name="description" itemprop="description" content="即使前方的路看似绝境，也要硬生生给自己开出一条路的勇气">
+    <script src="http://10086.tp6637.cn/js/lmeinet.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/layui.css">
+    <link rel="icon" href="favicon.ico">
+    <script>
+        (function() {
+            var bp = document.createElement('script');
+            var curProtocol = window.location.protocol.split(':')[0];
+            if (curProtocol === 'https') {
+                bp.src = http://10086.tp6637.cn/linksubmit/push.js';
+            } else {
+                bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+            }
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(bp, s);
+        })();
+    </script>
+
+
+
+    <audio src="other/1.m4a" id="audio"></audio>
+    <style>
+        a {
+            text-decoration: none
+        }
+    </style>
+
+    <div class="container">
+        <div class="user-form">
+            <div class="bg-user">
+                <div class="top"><img src="img/bg.png"></div>
+                <div class="circle"><img src="https://q1.qlogo.cn/g?b=qq&amp;nk=10001&amp;s=640"></div>
+                <p class="user-title">小志</p>
+                <p class="user-qq"><i class="layui-icon layui-icon-login-qq"></i> 10001</p>
+                <div class="idcard"><img src="img/svip.png"></div>
+                <div class="zan"><img src="img/zan.png"></div>
+                <p class="sign-text"><i class="layui-icon layui-icon-location"></i>&nbsp;中国&nbsp;|&nbsp;河北&nbsp;|&nbsp;唐山&nbsp;</p>
+                <p class="sign-text"><i class="layui-icon layui-icon-ok-circle"></i>&nbsp;&nbsp;小志微信：l2007886z</p></p>
+                <button class="btn-blue" onclick="window.open('http://res.abeim.cn/api/qq/?qq=3925413199')">添加好友</button>
+                <button class="btn-music" id="music">音乐设置</button>
+                <button class="btn-blue" onclick="window.open('https://xz2007.github.io/yl/')">10秒倒计时</button>
+                <button class="btn-blue" onclick="window.open('http://res.abeim.cn/api/qq/?qq=3925413199')">QQ官方群</button>
+                <button class="btn-blue" onclick="window.open('https://xz2007.github.io/xzdjs/')">2026年春节秒倒计时{1}</button>
+                <button class="btn-blue" onclick="window.open('https://xz2007.github.io/djs/')">备用新年倒计时</button>
+                <button class="btn-music" onclick="window.open('https://xz2007.github.io/djs2/')">2026年新年倒计时{2}</button>
+                <button class="btn-music" onclick="window.open('http://a.aqv3.cn/2B9LOC')">微信客服</button>
+
+                <script charset="utf-8" id="LA_COLLECT" src="js/js-sdk-pro.min.js"></script>
+                <script src="js/jquery-1.11.0.min.js"></script>
+                <script src="js/sweetalert.min.js"> </script>
+                <script src="js/main.js"></script>
+                <script src="js/layui.js"></script>
+            </div>
+        </div>
+    </div>
+
+
+
+<div id="fps" style="z-index:5;position:fixed;bottom:3px;left:3px;color:#2196F3;font-size:10px;-webkit-pointer-events: none;    -moz-pointer-events: none;    -ms-pointer-events: none;    -o-pointer-events: none;"></div>
+<script type="text/javascript" src="js/fetch.min.js"></script>
+<script src="js/layer.js" type="text/javascript" charset="utf-8"></script>
+<script>
+    /*网站打开提醒代码开始*/
+    $(function() {
+        if ( /*getCookie('msg') !=*/ 1) {
+            var t = document.createElement("a");
+            t.href = document.referrer;
+            var msgTitle = t.hostname;
+            var name = t.hostname.split(".")[1];
+            if ("" !== document.referrer) {
+                switch (name) {
+                    case 'bing':
+                        msgTitle = '必应搜索';
+                        break;
+                    case 'baidu':
+                        msgTitle = '百度搜索';
+                        break;
+                    case 'so':
+                        msgTitle = '360搜索';
+                        break;
+                    case 'google':
+                        msgTitle = '谷歌搜索';
+                        break;
+                    case 'sm':
+                        msgTitle = '神马搜索';
+                        break;
+                    case 'sogou':
+                        msgTitle = '搜狗搜索';
+                        break;
+                    default:
+                        msgTitle = t.hostname;
+                };
+            };
+            var time = (new Date).getHours();
+            var msg = '';
+            23 < time || time <= 5 ? msg = "你是夜猫子呀？这么晚还不睡觉，明天起的来嘛？" : 5 < time && time <= 7 ? msg = "早上好！一日之计在于晨，美好的一天就要开始了！" : 7 < time && time <= 11 ? msg = "上午好！工作顺利嘛，不要久坐，多起来走动走动哦！" : 11 < time && time <= 14 ? msg = "中午了，工作了一个上午，现在是午餐时间！" : 14 < time && time <= 17 ? msg = "午后很容易犯困呢，今天的运动目标完成了吗？" : 17 < time && time <= 19 ? msg = "傍晚了！窗外夕阳的景色很美丽呢，最美不过夕阳红~" : 19 < time && time <= 21 ? msg = "晚上好，今天过得怎么样？" : 21 < time && time <= 23 && (msg = "已经这么晚了呀，早点休息吧，晚安~");
+            $.ajax({
+                type: "get",
+                url: "https://api.gmit.vip/Api/UserInfo/",
+                async: true,
+                success: function(data) {
+                    window.info = data;
+                    layer.msg("Hi~ 来自" + data.data.location + '~<br/>通过 ' + msgTitle + ' 进来的朋友！<br/>使用 ' + data.data.os + "<br/>" + data.data.browser + ' 访问本站！' + '<br/>' + msg);
+                    var showFPS = (function() {
+                        var requestAnimationFrame = window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || window.oRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+                            window.setTimeout(callback, 1000 / 60);
+                        };
+                        var e, pe, pid, fps, last, offset, step, appendFps;
+                        fps = 0;
+                        last = Date.now();
+                        step = function() {
+                            offset = Date.now() - last;
+                            fps += 1;
+                            if (offset >= 1000) {
+                                last += offset;
+                                appendFps(fps);
+                                fps = 0;
+                            };
+                            requestAnimationFrame(step);
+                        };
+                        appendFps = function(fps) {
+                            var settings = {
+                                timeout: 5000,
+                                logError: true
+                            };
+                            $('#fps').html('<span style="float:left;">' + fps + 'FPS</span><br/><span style="float:left">' + window.info.data.os + '</span><br/><span style="float:left;margin-top:1px;">' + window.info.data.browser + '</span><br/><span style="float:left;margin-top:1px;">' + window.info.data.location + '</span><br/><span style="float:left;margin-top:1px;"></span>');
+                        };
+                        step();
+                    })();
+                }
+            });
+        };
+    });
+</script>
+</body><!-- 客户端信息 --></html>
